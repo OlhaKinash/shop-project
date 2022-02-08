@@ -21,8 +21,15 @@ header {
     padding: 25px 0;
 }
 
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 [class*="col-"] {
     float: left;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .row:after, ul.menu:after {
@@ -35,14 +42,204 @@ header {
     width: 25%;
 }
 
+.col-4 {
+    width: 33,333%;
+}
+
 .col-6 {
     width: 50%;
+}
+
+.col-8 {
+    width: 66,667;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.logo {
+    text-align: left center;
+    height: auto;
+    padding-top: 7px;
+}
+
+button {
+    display: block;
+    background-color: #2c71b8;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+
+.slider {
+    height: 400px;
+    background-color: rgba(35, 90, 147, 0.5);
+}
+
+.container-slider {
+    width: 1200px;
+    height: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.main {
+    height: 100%;
+    background-color: rgba(44, 113, 184, 0.5);
+}
+
+.container-main {
+    width: 1200px;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.path {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.path a {
+    text-decoration: none;
+}
+
+.path a:last-child {
+    text-decoration: underline;
+}
+
+.arrow-right {
+    height: 7px;
+    width: 7px;
+    background-image: url(images/arrow-right.png);
+}
+
+.naming {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+}
+
+.sort {
+    margin-top: 15px;
+    border: 1px solid white;
+}
+
+.sort-menu {
+    position: relative;
+}
+
+.sort-menu a {
+    display: block;
+    width: 270px;
+    height: 40px;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 21px;
+    line-height: 40px;
+    text-decoration: none;
+    list-style: none;
+    text-align: left centers;
+    padding: 3px;
+}
+
+.sort-submenu li a:hover {
+    background-color: white;
+    color: #2c71b8;
+}
+
+.sort-submenu {
+    list-style: none;
+    display: none;
+    position: absolute;
+}
+
+.sort-arrow {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #2c71b8;
+    color: white;
+    background-image: url(images/sort-arrow.png);
+    position: absolute;
+    top: 5px;
+    right: 45px;
+}
+
+.img-search {
+    display: block;
+    background-color: #2c71b8;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+}
+
+.search-container {
+    display: block;
+    padding-top: 7px;
+    color: #2c71b8;
+    position: relative;
+}    
+    
+.search {    
+    text-align: left;
+    border: 1px solid #2c71b8;
+    height: 40px;
+    width: 200px;
+    color: #2c71b8;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.cart-container {
+    display: block;
+    padding-top: 7px;
+    position: relative;
+}
+
+.img-cart {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    top: 7px;
+    right: 5px;
+}
+
+.count {
+    display: block;
+    background-color: #2c71b8;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0px;
+    left: -10px;
 }
 
 .menu li {
     width: 25%;
     float: left;
     border-left: 1px solid #2c71b8;
+    position: relative;
 }
 .menu li:last-child {
     border-right: 1px solid #2c71b8;
@@ -58,7 +255,43 @@ header {
     font-size: 21px;
 }
 
+.down {
+    display: none;
+    width: 286px;
+    background-color: #2c71b8;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-inline-start: 0pt;
+    text-align: left center;
+    position: absolute;
+    left: -1px;
+}
+
+.selected:hover {
+    background-color: #2c71b8;
+    color: white;
+    overflow: visible;
+    text-overflow: visible;
+}
+
 .menu a:hover {
     background-color: #2c71b8;
     color: white;
+}
+
+.menu > li:hover .down {
+    display: block;
+    background-color: #2c71b8;
+    color: white;
+    content-visibility: visible;
+    overflow: visible;
+    text-overflow: visible;
+}
+
+.down a:hover {
+    background-color: white;
+    color: #2c71b8;
+    overflow: visible;
+    text-overflow: visible;
 }
