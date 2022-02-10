@@ -11,6 +11,7 @@ body {
 
 .container {
     width: 1200px;
+    height: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -43,7 +44,7 @@ header {
 }
 
 .col-4 {
-    width: 33,33 3%;
+    width: 33%;
 }
 
 .col-6 {
@@ -51,7 +52,7 @@ header {
 }
 
 .col-8 {
-    width: 66,667;
+    width: 66%;
 }
 
 .col-9 {
@@ -68,27 +69,9 @@ header {
     padding-top: 7px;
 }
 
-button {
-    display: block;
-    background-color: #2c71b8;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 12px;
-    right: 0px;
-}
-
 .slider {
     height: 400px;
     background-color: rgba(35, 90, 147, 0.5);
-}
-
-.container-slider {
-    width: 1200px;
-    height: 400px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
 }
 
 .main {
@@ -96,25 +79,18 @@ button {
     background-color: rgba(44, 113, 184, 0.5);
 }
 
-.container-main {
-    width: 1200px;
-    height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-}
-
-.path {
+.breadcrumbs {
     padding-top: 30px;
     padding-bottom: 10px;
     font-size: 14px;
 }
 
-.path a {
+.breadcrumbs a {
     text-decoration: none;
+    color: #2fb3da;
 }
 
-.path a:last-child {
+.breadcrumbs a:last-child {
     text-decoration: underline;
 }
 
@@ -128,21 +104,23 @@ button {
     font-size: 48px;
     font-weight: bold;
     color: white;
-    padding-top: 20px;
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
 
 .sort {
-    margin-top: 15px;
-    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .sort-menu {
     position: relative;
+    border: 1px solid white;
 }
 
 .sort-menu a {
     display: block;
-    width: 270px;
+    width: 265px;
     height: 40px;
     background-color: #2c71b8;
     color: white;
@@ -150,42 +128,43 @@ button {
     line-height: 40px;
     text-decoration: none;
     list-style: none;
-    text-align: left centers;
+    text-align: left center;
     padding: 3px;
 }
 
-.sort-submenu li a:hover {
+.sort-submenu > li a:hover {
     background-color: white;
     color: #2c71b8;
 }
 
 .sort-submenu {
     list-style: none;
-    display: none;
+    border: 1px solid white;
+    display: block;
     position: absolute;
+    z-index: 10;
 }
 
 .sort-arrow {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: #2c71b8;
-    color: white;
+    width: 10px;
+    height: 10px;
     background-image: url(images/sort-arrow.png);
     position: absolute;
-    top: 5px;
-    right: 45px;
+    top: 7px;
+    right: 10px;
 }
 
 .img-search {
     display: block;
     background-color: #2c71b8;
     padding: 5px;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    top: -2px;
-    right: -1px;
+    top: 15px;
+    right: 4px;
+    border: none;
+    background-position: center;
 }
 
 .search-container {
@@ -195,7 +174,7 @@ button {
     position: relative;
 }    
     
-.search {    
+input.search {    
     text-align: left;
     border: 1px solid #2c71b8;
     height: 40px;
@@ -235,12 +214,163 @@ button {
     left: -10px;
 }
 
+.product {
+    width: 270px;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.product-img {
+    width: 270px;
+    height: 180px;
+    background-color: #cadbed;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.zoom, .like {
+    position: absolute;
+    right: 10px;
+    border: 1px solid #548cc5;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+}
+
+.zoom {
+    top: 10px;
+}
+
+.zoom:hover {
+    background-color: #2c71b8;
+    background-image: url(images/zoom-selected.png);
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.like {
+    top: 50px;
+}
+
+.like:hover {
+    background-color: #2c71b8;
+    background-image: url(images/like-selected.png);
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product-body {
+    width: 270px;
+    height: 100%;
+    border: 1px solid white;
+    padding: 15px;
+    color: white;
+    background-color: rgba(44, 113, 184, 0.75);
+}
+
+.product-title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.product-description {
+    font-size: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.product-features {
+    font-size: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+span {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.product-price {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sub-price {
+    vertical-align: super;
+    font-size: 25px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-more-details {
+    background-color: #2c71b8;
+    border: 1px solid white;
+}
+
+.btn-add-to-cart {
+    background-color: #2c71b8;
+    border: 1px solid white;
+    text-align: left;
+    padding-left: 25px;
+    position: relative;
+}
+
+.cart {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+.btn-more-details, .btn-add-to-cart {
+    width: 210px;
+    height: 50px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 15px 10px 0px 10px;
+}
+
+.btn-more-details:hover {
+    background-color: #598fc7;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #598fc7;
+}
+
+.next {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .menu li {
     width: 25%;
     float: left;
     border-left: 1px solid #2c71b8;
     position: relative;
 }
+
 .menu li:last-child {
     border-right: 1px solid #2c71b8;
 }
@@ -255,24 +385,37 @@ button {
     font-size: 21px;
 }
 
-.down {
-    display: none;
+.down a {
     width: 286px;
     background-color: #2c71b8;
     color: white;
+    line-height: 50px;
     padding-top: 25px;
     padding-bottom: 10px;
     padding-inline-start: 0pt;
     text-align: left center;
     position: absolute;
     left: -1px;
+    display: none;
+    z-index: 10!important;
+}
+
+.down li {
+    width: 286px;
+    float: none;
+    border-left: none;
+}
+
+.menu li:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .selected:hover {
     background-color: #2c71b8;
     color: white;
     overflow: visible;
-    text-overflow: visible;
 }
 
 .menu a:hover {
@@ -280,12 +423,13 @@ button {
     color: white;
 }
 
-.menu > li:hover .down {
+.menu > li:hover a {
     display: block;
     background-color: #2c71b8;
     color: white;
-    content-visibility: visible;
-    overflow: visible;
+    text-align: left center;
+    line-height: 50px;
+    font-size: 21px;
     text-overflow: visible;
 }
 
@@ -293,5 +437,4 @@ button {
     background-color: white;
     color: #2c71b8;
     overflow: visible;
-    text-overflow: visible;
 }
